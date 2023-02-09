@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* PT Sans Narrow */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigation-item {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navigation-link {
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.want-to-be-here {
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  height: 36px;
+  width: 160px;
+  border-radius: 4px;
+  padding: 8px 50px 8px 50px;
+}
+
+.main-index-Sedona {
+  background-color: #a0c8e8ab;
+  background-image: url("../images/main-page/background-main.jpg");
+  background-size: 100% 485px;
+  background-repeat: no-repeat;
+}
+
+.title-of-h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-after-h2 {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-title,
+.advice-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-description,
+.advice-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.advantages-item {
+  height: 385px;
+  width: 400px;
+  gap: 10px;
+  text-align: center;
+}
+
+.advantages-item:nth-child(2n) {
+  background-color: #83B3D31F;
+}
+
+.advantages-item:nth-child(2n+1) {
+  background-color: #83B3D333;
+
+}
+
+.advantages-item:first-child,
+li.advantages-item:last-child {
+  background-color: #82B3D3;
+  color: #ffffff;
+
+}
+
+.advice-item:nth-child(2n+1) {
+  background-color: #83B3D333;
+}
+
+.button-search-hotels {
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  height: 52px;
+  width: 376px;
+  border-radius: 4px;
+  padding: 8px 50px 8px 50px;
+  text-align: center;
+}
+
+.subscription {
+  color: #ffffff;
+  background-image: url("../images/main-page/subscription-background-image.jpg");
+  background-size: 100% 415px;
+  background-repeat: no-repeat;
+}
+
+.field {
+  font-size: 18px;
+  height: 52px;
+  width: 452px;
+  border-radius: 4px;
+
+}
+
+div .subscription-button {
+  background-color: #82B3D3;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-contacts-address-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  color: #ffffff;
+}
+
+.inner-header {
+  background-image: url("../images/catalog-page/catalog-background-image.jpg");
+  background-size: 100% 412px;
+  background-repeat: no-repeat;
+}
+
+.main-inner {
+  background-color: #ffffff;
+}
+
+.breadcrumbs {
+  color: #ffffff;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+.button-filter {
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.button-submit button {
+  background-color: #82B3D3;
+  height: 36px;
+  width: 191px;
+  border-radius: 4px;
+  padding: 8px 50px 8px 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.button-reset button {
+  background-color: #82b2d300;
+  height: 36px;
+  width: 191px;
+  border-radius: 4px;
+  padding: 8px 50px 8px 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+
+.results {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.product-card {
+  background-color: #ffffff;
+}
+
+.product-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+}
+
+.product-card-type {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+}
+
+.product-card-button-like {
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.product-card-button-more {
+  text-transform: uppercase;
+  background-color: #82B3D3;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.like {
+  background-color: #7DB54F;
+}
+
+.rating {
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color:#F2F2F2;
+}
+
+.product-card {
+  height: 438px;
+width: 340px;
+border-radius: 4px;
+border-color: rgba(128, 128, 128, 0.773);
+padding: 20px;
+}
+
+.pagination-item {
+  height: 60px;
+width: 60px;
+border-radius: 4px;
+font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color:#ffffff;
+  background-color: #82B3D3;
+}
+
+.pagination-current, .zero {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}

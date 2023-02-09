@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -11,22 +12,21 @@
     <!-- Шапка страницы -->
     <header class="page-header">
       <nav class="navigation">
-        <!-- Логотип-ссылка - настоящий -->
+        <!-- Логотип-ссылка, но тут пустой -->
         <a class="navigation-logo" href="index.html">
-          <div><img class="page-header-logo" src="images/navigation/logo.svg" alt="Логотип «City of Sedona»."
-              height="140" width="70">
-          </div>
+          <img class="page-header-logo" src="images/navigation/logo.svg" alt="Логотип «City of Sedona»." height="140"
+            width="70">
         </a>
         <!-- Навигация по сайту -->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиницы</a>
+            <a class="navigation-link" href="#">Гостиницы</a>
           </li>
         </ul>
         <!-- Навигация для пользователя -->
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="navigation-link want-to-be-here" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -128,11 +128,11 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <label><input type="text" value="0" placeholder="от"></label>
-              <label><input type="text" value="9000" placeholder="до"></label>
+              <div class="price"><label><input type="text" value="0" placeholder="от"></label></div>
+              <div class="price"><label><input type="text" value="9000" placeholder="до"></label></div>
             </fieldset>
-            <div><button class="button" type="submit">Применить</button></div>
-            <div><button class="button" type="reset">Сбросить</button></div>
+            <div class="button-filter button-submit"><button class="button" type="submit">Применить</button></div>
+            <div class="button-filter button-reset"><button class="button" type="reset">Сбросить</button></div>
           </form>
         </section>
       </header>
@@ -215,8 +215,8 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
+          <li class="pagination-item pagination-current">
+            <a class="pagination-link pagination-current-link">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -227,7 +227,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item zero">
             <span class="pagination-link">...</span>
           </li>
           <li class="pagination-item">
@@ -236,17 +236,21 @@
         </ul>
       </section>
       <!-- Подписка на рассылку -->
-      <section class="newsletter subscription">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-discription">
-          Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="subscription-email">Email</label>
-          <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
-            required>
-          <div><button class="button subscription-button" type="submit">Подписаться</button></div>
-        </form>
-      </section>
+      <div class="newsletter">
+        <section class="subscription-catalog">
+          <h2 class="subscription-title title-of-h2">Подпишитесь на рассылку</h2>
+          <p class="subscription-discription text-after-h2">
+            Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="subscription-email">
+              <div class="visually-hidden">Email</div>
+            </label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
+              required>
+            <div><button class="button subscription-button" type="submit">Подписаться</button></div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <!-- Подвал -->
@@ -275,8 +279,8 @@
       </ul>
       <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 812 812-12-12</a>
       <a class="footer-logo" href="https://htmlacademy.ru/">
-        <img class="page-footer-logo" src="images/footer/html-academy.svg" height="33" width="115"
-          alt="Логотип «HTML-Academy».">
+        <img class="page-footer-logo" src="images/footer/html-academy.svg" alt="Логотип «HTML-Academy»." height="33"
+          width="115">
       </a>
     </footer>
 

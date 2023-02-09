@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -12,7 +13,7 @@
     <header class="page-header">
       <nav class="navigation">
         <!-- Логотип-ссылка, но тут пустой -->
-        <a class="navigation-logo" href="">
+        <a class="navigation-logo" href="#">
           <img class="page-header-logo" src="images/navigation/logo.svg" alt="Логотип «City of Sedona»." height="140"
             width="70">
         </a>
@@ -51,7 +52,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="navigation-link want-to-be-here" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -67,9 +68,9 @@
       </section>
       <!-- Немного о Седоне -->
       <section class="about-Sedona">
-        <h2 class="about-Sedona-title">Седона — небольшой городок в Аризоне,
+        <h2 class="about-Sedona-title title-of-h2">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h2>
-        <p class="about-Sedona-go-to-advantages">Рассмотрим причины, по которым Седона круче,
+        <p class="about-Sedona-go-to-advantages text-after-h2">Рассмотрим причины, по которым Седона круче,
           чем Гранд-Каньон!</p>
         <!-- Достоинства -->
         <section class="advantages">
@@ -122,9 +123,9 @@
       </section>
       <!-- Приглашение в Седону -->
       <section class="invitation">
-        <h2 class="invitation-title">Приезжайте в Седону отдохнуть
+        <h2 class="invitation-title title-of-h2">Приезжайте в Седону отдохнуть
           в комфорте и уюте!</h2>
-        <p class="invitation-discription">Опытный персонал
+        <p class="invitation-discription text-after-h2">Опытный персонал
           и качественное обслуживание!</p>
         <!-- Советы -->
         <section class="advice">
@@ -167,24 +168,28 @@
       </section>
       <!-- Поиск гостиницы -->
       <section class="search">
-        <h2 class="search-title">Заинтересовались?</h2>
-        <p class="search-discription">Укажите предполагаемые даты поездки, и мы покажем
+        <h2 class="search-title title-of-h2">Заинтересовались?</h2>
+        <p class="search-discription text-after-h2">Укажите предполагаемые даты поездки, и мы покажем
           вам лучшие предложения гостиниц в Седоне</p>
         <a class="button button-search-hotels" href="#">Поиск гостиницы
           в Cедоне</a>
       </section>
       <!-- Подписка на рассылку -->
-      <section class="newsletter subscription">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-discription">
-          Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="subscription-email">Email</label>
-          <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
-            required>
-          <div><button class="button subscription-button" type="submit">Подписаться</button></div>
-        </form>
-      </section>
+      <div class="newsletter">
+        <section class="subscription">
+          <h2 class="subscription-title title-of-h2">Подпишитесь на рассылку</h2>
+          <p class="subscription-discription text-after-h2">
+            Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="subscription-email">
+              <div class="visually-hidden">Email</div>
+            </label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
+              required>
+            <div><button class="button subscription-button" type="submit">Подписаться</button></div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <!-- Подвал -->
