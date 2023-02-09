@@ -157,6 +157,7 @@ li.advantages-item:last-child {
 .subscription {
   color: #ffffff;
   background-image: url("../images/main-page/subscription-background-image.jpg");
+  background-color: #b97a58;
   background-size: 100% 415px;
   background-repeat: no-repeat;
 }
@@ -195,6 +196,7 @@ div .subscription-button {
 
 .inner-header {
   background-image: url("../images/catalog-page/catalog-background-image.jpg");
+  background-color: #b97a58;
   background-size: 100% 412px;
   background-repeat: no-repeat;
 }
