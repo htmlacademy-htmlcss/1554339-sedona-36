@@ -14,32 +14,15 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-/* PT Sans Narrow */
-@font-face {
-  font-family: "PT Sans Narrow";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
-  font-display: swap;
+html {
+  height: 100%;
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -49,12 +32,91 @@ body {
   text-align: left;
 }
 
-li {
-  list-style-type: none;
+.visually-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
 }
 
-a {
+
+.list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.link {
   text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+.pagination {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.search-result {
+  display: flex;
+  width: 1060px;
+  margin: 50px 70px 40px 70px;
+}
+
+.select-control {
+  margin-left: 200px;
+}
+
+.view {
+  margin-left: auto;
+}
+
+.catalog-filter {
+  display: flex;
+  width: 220px;
+}
+
+.catalog-filter-group {
+  margin-right: 70px;
+}
+
+.catalog-filter-group.price {
+  margin-left: 70px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 140px;
+  margin-right: 28px;
+}
+
+.navigation-list {
+  width: 550px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .navigation-item {
@@ -79,14 +141,14 @@ a {
   padding: 8px 50px 8px 50px;
 }
 
-.main-index-Sedona {
+.main-index-sedona {
   background-color: #a0c8e8ab;
   background-image: url("../images/main-page/background-main.jpg");
   background-size: 100% 485px;
   background-repeat: no-repeat;
 }
 
-.title-of-h2 {
+.heading {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -94,7 +156,7 @@ a {
   text-transform: uppercase;
 }
 
-.text-after-h2 {
+.paragraph {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -116,8 +178,17 @@ a {
   text-align: center;
 }
 
-.advantages-item {
-  height: 385px;
+.advantages-list,
+.advice-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.advantages-item,
+.advice-item {
   width: 400px;
   gap: 10px;
   text-align: center;
@@ -129,14 +200,12 @@ a {
 
 .advantages-item:nth-child(2n+1) {
   background-color: #83B3D333;
-
 }
 
 .advantages-item:first-child,
-li.advantages-item:last-child {
+.advantages-item:last-child {
   background-color: #82B3D3;
   color: #ffffff;
-
 }
 
 .advice-item:nth-child(2n+1) {
@@ -154,6 +223,25 @@ li.advantages-item:last-child {
   text-align: center;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  width: 142px;
+}
+
+.footer-contacts-address-phone {
+  width: 331px;
+  margin: 0 195px;
+}
+
+.footer-logo {
+  margin-left: auto;
+}
+
 .subscription {
   color: #ffffff;
   background-image: url("../images/main-page/subscription-background-image.jpg");
@@ -167,10 +255,9 @@ li.advantages-item:last-child {
   height: 52px;
   width: 452px;
   border-radius: 4px;
-
 }
 
-div .subscription-button {
+.subscription-button {
   background-color: #82B3D3;
   font-size: 20px;
   font-weight: 700;
@@ -197,8 +284,13 @@ div .subscription-button {
 .inner-header {
   background-image: url("../images/catalog-page/catalog-background-image.jpg");
   background-color: #b97a58;
-  background-size: 100% 412px;
+  background-size: 1200px 412px;
   background-repeat: no-repeat;
+}
+
+.filter {
+  margin: 70px;
+  margin-top: 35px;
 }
 
 .main-inner {
@@ -231,7 +323,7 @@ div .subscription-button {
   text-align: center;
 }
 
-.button-submit button {
+.button-submit {
   background-color: #82B3D3;
   height: 36px;
   width: 191px;
@@ -241,7 +333,7 @@ div .subscription-button {
   text-transform: uppercase;
 }
 
-.button-reset button {
+.button-reset {
   background-color: #82b2d300;
   height: 36px;
   width: 191px;
@@ -249,6 +341,12 @@ div .subscription-button {
   padding: 8px 50px 8px 50px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.product-list {
+  display: flex;
+
+  flex-wrap: wrap;
 }
 
 .price {
@@ -272,6 +370,11 @@ div .subscription-button {
 
 .product-card {
   background-color: #ffffff;
+  height: 438px;
+  width: 340px;
+  border-radius: 4px;
+  border-color: rgba(128, 128, 128, 0.773);
+  padding: 20px;
 }
 
 .product-card-title {
@@ -318,34 +421,23 @@ div .subscription-button {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  background-color:#F2F2F2;
-}
-
-.product-card {
-  height: 438px;
-width: 340px;
-border-radius: 4px;
-border-color: rgba(128, 128, 128, 0.773);
-padding: 20px;
+  background-color: #F2F2F2;
 }
 
 .pagination-item {
   height: 60px;
-width: 60px;
-border-radius: 4px;
-font-size: 20px;
+  width: 60px;
+  border-radius: 4px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
-  color:#ffffff;
+  color: #ffffff;
   background-color: #82B3D3;
 }
 
-.pagination-current, .zero {
+.pagination-current,
+.zero {
   color: #000000;
   background-color: #F2F2F2;
-}
-
-.visually-hidden {
-  visibility: hidden;
 }
