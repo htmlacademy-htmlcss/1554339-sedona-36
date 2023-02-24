@@ -351,10 +351,9 @@ body {
   height: 52px;
   width: 376px;
   border-radius: 4px;
-  padding: 8px 50px;
   text-align: center;
   text-decoration: none;
-  margin-bottom: 0;
+  padding: 8px 50px;
 }
 
 .page-footer {
@@ -547,6 +546,10 @@ body {
   font-weight: 700;
 }
 
+.button-search {
+  margin-left: 108px;
+  margin-right: 108px;
+}
 
 .button-reset {
   background-color: #82b2d300;
