@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -77,6 +83,7 @@ body {
 .pagination {
   display: flex;
   margin: 80px 70px 60px 70px;
+  padding: 0;
 }
 
 .search-result {
@@ -85,8 +92,14 @@ body {
   margin: 50px 70px 40px 70px;
 }
 
+.image {
+  display: block;
+}
+
 .search {
-  padding: 96px 304px;
+  padding: 96px 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .newsletter {
@@ -95,13 +108,17 @@ body {
 }
 
 .subscription-text {
-  padding: 96px 258px 104px 258px;
+  padding: 96px 0 104px 0;
   color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .subscription-text-catalog {
-  padding: 96px 258px 104px 258px;
   color: #000000;
+  padding: 96px 0 104px 0;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .select-control {
@@ -114,19 +131,21 @@ body {
 
 .catalog-filter {
   display: flex;
-  width: 220px;
 }
 
 .catalog-filter-group {
-  margin: 0;
-  padding: 0;
   margin-right: 70px;
+  margin-left: 0;
+  padding: 0;
   min-width: 151px;
+  border: 0 none;
 }
 
 .catalog-filter-price {
   margin-left: 70px;
+  margin-right: 0;
   padding: 0;
+  border: 0 none;
 }
 
 .catalog-filter-list {
@@ -136,9 +155,8 @@ body {
 
 .navigation {
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  min-height: 64px;
 }
 
 .about-sedona-title {
@@ -172,12 +190,15 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
   margin-bottom: 20px;
 }
 
 .subscription-form {
   margin-top: 54px;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .navigation-list {
@@ -214,12 +235,12 @@ body {
 
 .logo {
   display: block;
-  padding: 51px 371px 82px 371px;
+  margin: 0 auto;
 
 }
 
 .main-text {
-  padding: 69px 290px;
+  padding: 69px 0;
   margin-bottom: 21px;
 }
 
@@ -249,8 +270,10 @@ body {
 .main-index-sedona {
   background-color: #a0c8e8ab;
   background-image: url("../images/main-page/background-main.jpg");
-  background-size: 100% 485px;
+  background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .advantages-title {
@@ -264,7 +287,7 @@ body {
 }
 
 .invitation-text {
-  margin: 96px 304px;
+  padding: 96px 0;
 }
 
 .advice-title {
@@ -306,7 +329,6 @@ body {
 .advantage {
   margin: 102px auto;
   width: 230px;
-  height: 181px;
 }
 
 .advantages-item {
@@ -348,7 +370,6 @@ body {
   text-transform: uppercase;
   background-color: #756157;
   color: #ffffff;
-  height: 52px;
   width: 376px;
   border-radius: 4px;
   text-align: center;
@@ -364,7 +385,6 @@ body {
 
 .page-header {
   padding: 0 70px;
-  height: 64px;
 }
 
 .page-container {
@@ -384,24 +404,6 @@ body {
 
 .footer-container {
   display: flex;
-  height: 50px;
-}
-
-.vkontakte {
-  padding: 13px 12px;
-}
-
-.telegram {
-  padding: 12px 15px 14px 15px;
-}
-
-.youtube {
-  padding: 12px 13px;
-}
-
-.footer-contacts-address-phone {
-  width: 331px;
-  padding: 5px 195px;
 }
 
 .button-cards {
@@ -428,19 +430,14 @@ body {
   color: #000000;
 }
 
-.subscription {
-  color: #ffffff;
-  background-image: url("../images/main-page/subscription-background-image.jpg");
-  background-color: #b97a58;
-  background-size: 100% 415px;
-  background-repeat: no-repeat;
-}
-
 .field {
   font-size: 18px;
   height: 52px;
   width: 452px;
-  border-radius: 4px;
+}
+
+.field-catalog {
+  background-color: #F2F2F2;
 }
 
 .subscription-button {
@@ -451,6 +448,8 @@ body {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+  border: none;
+  width: 232px;
 }
 
 .footer-contacts-address-phone {
@@ -458,7 +457,7 @@ body {
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  margin: 0;
+  margin: 45px 0 35px 0;
   color: #000000;
 }
 
@@ -474,7 +473,7 @@ body {
 .inner-header {
   background-image: url("../images/catalog-page/catalog-background-image.jpg");
   background-color: #b97a58;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
 }
@@ -521,7 +520,7 @@ body {
   line-height: 23px;
   color: #ffffff;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-top: 16px;
 }
@@ -536,7 +535,7 @@ body {
   background-color: #82B3D3;
   width: 191px;
   border-radius: 4px;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 0;
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -546,8 +545,8 @@ body {
 }
 
 .button-search {
-  margin-left: 108px;
-  margin-right: 108px;
+  display: flex;
+  justify-content: center;
 }
 
 .button-reset {
@@ -555,7 +554,7 @@ body {
   height: 36px;
   width: 191px;
   border-radius: 4px;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 0;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 16px;
@@ -564,11 +563,12 @@ body {
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   list-style-type: none;
   margin: 0 70px;
   padding: 0;
+  gap: 20px;
 }
 
 .price {
@@ -578,7 +578,6 @@ body {
   text-align: left;
   display: flex;
   margin-top: 16px;
-  position: relative;
 }
 
 .price-input {
@@ -587,14 +586,20 @@ body {
   margin-right: 2px;
 }
 
-.price-input-end {
+.price-input-start {
   margin-right: 0;
+  position: relative;
 }
 
-.price_start {
+.price-input-end {
+  margin-right: 0;
+  position: relative;
+}
+
+.price-start {
   position: absolute;
   top: 12px;
-  right: 165px;
+  right: 20px;
 }
 
 .buttons {
@@ -603,10 +608,10 @@ body {
   margin-left: 70px;
 }
 
-.price_end {
+.price-end {
   position: absolute;
   top: 12px;
-  right: 12px;
+  right: 20px;
 }
 
 .results {
@@ -614,7 +619,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  padding: 6.5px 0;
+  padding: 7px 0;
 }
 
 .select-control {
@@ -625,12 +630,23 @@ body {
 
 .product-card {
   background-color: #ffffff;
-  height: 438px;
   border-radius: 4px;
   border-color: rgba(128, 128, 128, 0.773);
   padding: 20px;
   list-style-type: none;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-content {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 21px 36px 37px;
+  column-gap: 20px;
+  row-gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .product-card-title {
@@ -638,17 +654,21 @@ body {
   font-weight: 700;
   line-height: 28px;
   color: #000000;
+  margin: 0;
+  margin-top: 16px;
 }
 
 .product-card-type {
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
 }
 
 .product-card-price {
   font-size: 18px;
   line-height: 21px;
   text-align: right;
+  margin: 0;
 }
 
 .product-card-button-like {
@@ -660,6 +680,8 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 0;
+  padding: 8px 0;
+  border-radius: 4px;
 }
 
 .product-card-link {
@@ -677,6 +699,8 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 0;
+  padding: 8px 0;
+  border-radius: 4px;
 }
 
 .like {
@@ -688,6 +712,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   background-color: #F2F2F2;
+  padding: 8px 0;
 }
 
 .pagination-item {
