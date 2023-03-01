@@ -1,0 +1,760 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  background-color: #F2F2F2;
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+.subscription-discription {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.invitation-discription {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.search-discription {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: 20px auto 62px auto;
+}
+
+.about-sedona-go-to-advantages {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  margin: 80px 70px 60px 70px;
+  padding: 0;
+}
+
+.search-result {
+  display: flex;
+  width: 1060px;
+  margin: 50px 70px 40px 70px;
+}
+
+.image {
+  display: block;
+}
+
+.search {
+  padding: 96px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter {
+  background-image: url("../images/main-page/subscription-background-image.jpg");
+  background-size: cover;
+}
+
+.subscription-text {
+  padding: 96px 0 104px 0;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.subscription-text-catalog {
+  color: #000000;
+  padding: 96px 0 104px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.select-control {
+  margin-left: 200px;
+}
+
+.view {
+  margin-left: auto;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+.catalog-filter-group {
+  margin-right: 70px;
+  margin-left: 0;
+  padding: 0;
+  min-width: 151px;
+  border: 0 none;
+}
+
+.catalog-filter-price {
+  margin-left: 70px;
+  margin-right: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about-sedona-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.invitation-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscription-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  margin-top: 54px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-list {
+  display: flex;
+  width: 550px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.navigation-logo {
+  display: flex;
+  width: 140px;
+  margin: 0;
+  margin-right: 28px;
+  padding: 0;
+}
+
+.navigation-user {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.main-container {
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+
+}
+
+.main-text {
+  padding: 69px 0;
+  margin-bottom: 21px;
+}
+
+.navigation-item {
+  font-size: 20px;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0;
+}
+
+.button-want-to-be-here {
+  margin-top: 14px;
+}
+
+.navigation-link {
+  display: block;
+  padding: 20px 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+
+.main-index-sedona {
+  background-color: #a0c8e8ab;
+  background-image: url("../images/main-page/background-main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 51px;
+  padding-bottom: 82px;
+}
+
+.advantages-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 62px;
+}
+
+.invitation-text {
+  padding: 96px 0;
+}
+
+.advice-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin: 0;
+}
+
+.advice-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advice-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantage {
+  margin: 102px auto;
+  width: 230px;
+}
+
+.advantages-item {
+  width: 400px;
+  min-height: 385px;
+  gap: 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.advice-item {
+  width: 400px;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  min-height: 385px;
+}
+
+.advice-content {
+  margin: 81px 85px;
+}
+
+.advantages-item-wide {
+  background-color: #82B3D3;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+}
+
+.advantages-item:nth-child(2n) {
+  background-color: #83B3D31F;
+}
+
+.advice-item:nth-child(2n+1) {
+  background-color: #83B3D333;
+}
+
+.button-search-hotels {
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  width: 376px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 50px;
+}
+
+.page-footer {
+  display: flex;
+  margin: 0 auto;
+  padding: 40px 70px 30px 70px;
+}
+
+.page-header {
+  padding: 0 70px;
+}
+
+.page-container {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 5px 42px 5px 0;
+  list-style-type: none;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.button-cards {
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+.button-list {
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+.button-loner {
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+.footer-logo {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
+
+.field {
+  font-size: 18px;
+  height: 52px;
+  width: 452px;
+}
+
+.field-catalog {
+  background-color: #F2F2F2;
+}
+
+.subscription-button {
+  background-color: #82B3D3;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  width: 232px;
+}
+
+.footer-contacts-address-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 45px 0 35px 0;
+  color: #000000;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.inner-header {
+  background-image: url("../images/catalog-page/catalog-background-image.jpg");
+  background-color: #b97a58;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.catalog-products {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.filter {
+  padding: 35px 70px;
+}
+
+.breadcrumbs {
+  color: #ffffff;
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+
+}
+
+.breadcrumbs-item {
+  list-style-type: none;
+  margin: 0;
+  padding-right: 28px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.button-filter {
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.button-submit {
+  background-color: #82B3D3;
+  width: 191px;
+  border-radius: 4px;
+  padding: 8px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.button-search {
+  display: flex;
+  justify-content: center;
+}
+
+.button-reset {
+  background-color: #82b2d300;
+  height: 36px;
+  width: 191px;
+  border-radius: 4px;
+  padding: 8px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  list-style-type: none;
+  margin: 0 70px;
+  padding: 0;
+  gap: 20px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  display: flex;
+  margin-top: 16px;
+}
+
+.price-input {
+  width: 143px;
+  height: 48px;
+  margin-right: 2px;
+}
+
+.price-input-start {
+  margin-right: 0;
+  position: relative;
+}
+
+.price-input-end {
+  margin-right: 0;
+  position: relative;
+}
+
+.price-start {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.buttons {
+  margin: 0;
+  margin-top: auto;
+  margin-left: 70px;
+}
+
+.price-end {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.results {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  padding: 7px 0;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  width: 292px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border-color: rgba(128, 128, 128, 0.773);
+  padding: 20px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-content {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 21px 36px 37px;
+  column-gap: 20px;
+  row-gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.product-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.product-card-type {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: right;
+  margin: 0;
+}
+
+.product-card-button-like {
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.product-card-link {
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+}
+
+.product-card-button-more {
+  text-transform: uppercase;
+  background-color: #82B3D3;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.like {
+  background-color: #7DB54F;
+}
+
+.rating {
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+  padding: 8px 0;
+}
+
+.pagination-item {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  list-style-type: none;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  text-decoration: none;
+  margin: 0;
+  color: #000000;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 24px;
+}
+
+.zero {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.want-to-be-here {
+  display: block;
+  text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 34px;
+  margin-left: 20px;
+}
