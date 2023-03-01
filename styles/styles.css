@@ -97,7 +97,9 @@ body {
 }
 
 .search {
-  padding: 96px 304px;
+  padding: 96px 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .newsletter {
@@ -106,13 +108,17 @@ body {
 }
 
 .subscription-text {
-  padding: 156px 258px 104px 258px;
+  padding: 96px 0 104px 0;
   color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .subscription-text-catalog {
   color: #000000;
-  margin: 156px 258px 104px 258px;
+  padding: 96px 0 104px 0;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .select-control {
@@ -128,15 +134,16 @@ body {
 }
 
 .catalog-filter-group {
-  margin: 0;
-  padding: 0;
   margin-right: 70px;
+  margin-left: 0;
+  padding: 0;
   min-width: 151px;
   border: 0 none;
 }
 
 .catalog-filter-price {
   margin-left: 70px;
+  margin-right: 0;
   padding: 0;
   border: 0 none;
 }
@@ -191,6 +198,7 @@ body {
   margin-top: 54px;
   margin-bottom: 0;
   display: flex;
+  justify-content: center;
 }
 
 .navigation-list {
@@ -537,8 +545,8 @@ body {
 }
 
 .button-search {
-  margin-left: 108px;
-  margin-right: 108px;
+  display: flex;
+  justify-content: center;
 }
 
 .button-reset {
