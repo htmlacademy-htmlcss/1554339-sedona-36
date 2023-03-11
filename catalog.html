@@ -12,7 +12,6 @@
       <!-- Шапка страницы -->
       <header class="page-header">
         <nav class="navigation">
-          <!-- Логотип-ссылка, но тут пустой -->
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" src="images/navigation/logo.svg" alt="Логотип «City of Sedona»." height="70"
               width="140">
@@ -26,7 +25,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link-current navigation-link" href="#">Гостиницы</a>
+              <a class="navigation-link-current navigation-link">Гостиницы</a>
             </li>
           </ul>
           <!-- Навигация для пользователя -->
@@ -102,20 +101,25 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="swimming-pool" value="swimming-pool" checked>
-                      <span>Бассейн</span>
+                      <input class="visually-hidden control-input" type="checkbox" name="swimming-pool"
+                        value="swimming-pool" checked>
+                      <span class="control-mark-checkbox"></span>
+                      <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" value="parking" checked>
-                      <span>Парковка</span>
+                      <input class="visually-hidden control-input" type="checkbox" name="parking" value="parking"
+                        checked>
+                      <span class="control-mark-checkbox"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="Wi-Fi" value="Wi-Fi">
-                      <span>Wi-Fi</span>
+                      <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi" value="Wi-Fi">
+                      <span class="control-mark-checkbox"></span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -125,20 +129,25 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="building-type" value="hotel" checked>
-                      <span>Гостиница</span>
+                      <input class="visually-hidden control-input" type="radio" name="building-type" value="hotel"
+                        checked>
+                      <span class="control-mark-radio"></span>
+                      <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="building-type" value="motel">
-                      <span>Мотель</span>
+                      <input class="visually-hidden control-input" type="radio" name="building-type" value="motel">
+                      <span class="control-mark-radio"></span>
+                      <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" name="building-type" value="apartaments">
-                      <span>Апартаменты</span>
+                      <input class="visually-hidden control-input" type="radio" name="building-type"
+                        value="apartaments">
+                      <span class="control-mark-radio"></span>
+                      <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -146,11 +155,25 @@
               <fieldset class="catalog-filter-price">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="price">
-                  <div class="price-block"><input type="text" value="0" name="price-start" class="price-input"><label
-                      for="price-start" class="price-start">от</label></div>
-                  <div class="price-block"><input type="text" value="9000" name="price-end" class="price-input"><label
-                      for="price-end" class="price-end">до</label></div>
-                </div>
+                  <div class="price-area">
+                    <div class="price-block"><input type="text" value="0" name="price-start" class="price-input"><label
+                        for="price-start" class="price-border">от</label></div>
+                    <div class="price-block"><input type="text" value="9000" name="price-end" class="price-input"><label
+                        for="price-end" class="price-border">до</label></div>
+                  </div>
+                  <div class="range">
+                    <div class="range-scale">
+                      <div class="range-scale-opacity"></div>
+                      <div class="range-bar" style="left: 0; width: 206px">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
               </fieldset>
               <div class="buttons">
                 <button class="button button-submit" type="submit">Применить</button>
@@ -168,7 +191,6 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
             <div class="view">
-
               <div class="display display-current">
                 <a href="#" class="button-display-link">
                   <span class="visually-hidden">Показать карточки</span>
@@ -179,8 +201,6 @@
                   </svg>
                 </a>
               </div>
-
-
               <div class="display">
                 <a href="#" class="button-display-link">
                   <span class="visually-hidden">Показать список</span>
@@ -206,8 +226,9 @@
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="image" src="images/catalog-page/hotels/hotel-1.jpg" alt="Amara Resort & Spa" height="212"
-                  width="300">
+                <div class="image-catalog">
+                  <img class="image" src="images/catalog-page/hotels/hotel-1.jpg" alt="Amara Resort & Spa">
+                </div>
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
               </a>
               <div class="product-card-content">
@@ -222,8 +243,9 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="image" src="images/catalog-page/hotels/hotel-2.jpg" alt="Villas at Poco Diablo" height="212"
-                  width="300">
+                <div class="image-catalog">
+                  <img class="image" src="images/catalog-page/hotels/hotel-2.jpg" alt="Villas at Poco Diablo">
+                </div>
                 <h3 class="product-card-title">Villas at Poco Diablo</h3>
               </a>
               <div class="product-card-content">
@@ -238,8 +260,9 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="image" src="images/catalog-page/hotels/hotel-3.jpg" alt="Desert Quail Inn" height="212"
-                  width="300">
+                <div class="image-catalog">
+                  <img class="image" src="images/catalog-page/hotels/hotel-3.jpg" alt="Desert Quail Inn">
+                </div>
                 <h3 class="product-card-title">Desert Quail Inn</h3>
               </a>
               <div class="product-card-content">
@@ -254,8 +277,9 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="image" src="images/catalog-page/hotels/hotel-4.jpg" alt="GreenTree Inn" height="212"
-                  width="300">
+                <div class="image-catalog">
+                  <img src="images/catalog-page/hotels/hotel-4.jpg" alt="GreenTree Inn">
+                </div>
                 <h3 class="product-card-title">GreenTree Inn</h3>
               </a>
               <div class="product-card-content">
@@ -298,7 +322,7 @@
               Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="subscription-email" class="visually-hidden">Email </label>
-              <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email"
+              <input class="field field-catalog" placeholder="Ваш e-mail" type="email" name="subscription-email"
                 id="subscription-email" required>
               <button class="button subscription-button" type="submit">Подписаться</button>
             </form>
@@ -349,7 +373,77 @@
             </svg>
           </a>
       </footer>
-    </div>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group">
+                <label class="modal-label" for="date-in">Дата Заезда:</label>
+                <input class="auth-form-field dates visually-hidden" type="date" id="date-in" name="date-in" value="27 апреля 2020">
+                <span class="date date-in">
+                  <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none" viewBox="0 0 16 15"><path fill="#000" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/><path fill="#000" d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/><path fill="#000" d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+                </span>
+              </p>
+              <p class="field-group">
+                <label class="modal-label" for="date-out">Дата Выезда:</label>
+                <input class="auth-form-field dates visually-hidden" type="date" id="date-in" name="date-in" value="27 апреля 2020">
+                <span class="date date-out">
+                  <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none" viewBox="0 0 16 15"><path fill="#000" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/><path fill="#000" d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/><path fill="#000" d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+                </span>
+              </p>
+              <section class="guests">
+                <p class="field-group">
+                  <label class="modal-label guest-label" for="adults">Взрослые:</label>
+                  <input class="auth-form-field visually-hidden" type="number" id="adults" name="adults" value="2">
+                  <span class="counter counter-adults">
+                    <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
+                      viewBox="0 0 14 2">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
+                    <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
+                      viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
+                  </span>
+                </p>
+                <p class="field-group">
+                  <label class="modal-label guest-label-child" for="children">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button">
+                      <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"
+                        viewBox="0 0 26 26">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                      18 лет. Дети до 6 лет размещаются бесплатно.<svg class="svg-absolute"
+                        xmlns="http://www.w3.org/2000/svg" width="19" height="9" fill="none" viewBox="0 0 19 9">
+                        <path fill="#333" d="M9.5 0 19 9H0l9.5-9Z" />
+                      </svg></span>
+                  </span>
+                  <input class="auth-form-field visually-hidden" type="number" id="children" name="children" value="2">
+                  <span class="counter counter-children">
+                    <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
+                      viewBox="0 0 14 2">
+                      <path d="M0 0v2h14V0H0Z" />
+                    </svg>
+                    <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
+                      viewBox="0 0 14 14">
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                    </svg>
+                  </span>
+                </p>
+              </section>
+              <button class="auth-form-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 
