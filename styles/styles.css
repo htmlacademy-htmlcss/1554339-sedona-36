@@ -1355,13 +1355,15 @@ text-align: center;
   height: 100%;
   background-color: #F2F2F2CC;
   z-index: 1;
+  padding-top: 396px;
 }
 
 .modal {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px;
   background-color: #ffffff;
+  height: 576px;
 }
 
 .modal-auth {
@@ -1706,6 +1708,6 @@ text-align: center;
   display: block;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
