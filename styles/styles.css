@@ -432,6 +432,9 @@ left: 85px;
   text-align: center;
   text-decoration: none;
   padding: 8px 50px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 .button-search-hotels:hover {
@@ -692,6 +695,20 @@ left: 85px;
   margin-top: 16px;
 }
 
+.catalog-filter-item:hover {
+  opacity: 60%;
+}
+
+.catalog-filter-item:focus {
+  border: 3px solid #83B3D3;
+}
+
+.catalog-filter-item:active {
+  opacity: 30%;
+}
+
+
+
 .button-filter {
   font-weight: 700;
   line-height: 20px;
@@ -798,13 +815,25 @@ left: 85px;
   line-height: 24px;
   padding-left: 20px;
   border: none;
+  background-color: #E6E6E6;
+  cursor: pointer;;
+}
+
+.price-input:hover {
+  border: none;
+  }
+.price-input:focus {
+border: 3px solid #83B3D3;
+}
+
+.price-input:active {
+  border: 2px solid #000000;
 }
 
 .price-block {
   margin-right: 0;
   position: relative;
 }
-
 
 .price-border {
   position: absolute;
@@ -813,6 +842,7 @@ left: 85px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+  opacity: 30%;
 }
 
 .buttons {
@@ -988,20 +1018,19 @@ left: 85px;
   margin-right: 8px;
 }
 
-.pagination-item:hover {
+.pagination-item:not(.zero):not(.pagination-current):hover {
   background-color: #68A2CA;
 }
 
-.pagination-item:focus {
+.pagination-item:not(.zero):not(.pagination-current):focus {
   background-color: #68A2CA;
 }
 
-.pagination-item:active {
-  color: #FFFFFF4D;
+.pagination-item:not(.zero):not(.pagination-current):active {
   background-color: #82B3D3;
 }
 
-.pagination-item:disabled {
+.pagination-item:not(.zero):not(.pagination-current):disabled {
   background-color: #E5E5E5;
 }
 
@@ -1036,6 +1065,10 @@ left: 85px;
 
 .pagination-link-zero {
   color: #000000;
+}
+
+.pagination-item:not(.zero):not(.pagination-current):active > .pagination-link:not(.pagination-current-link) {
+  color: #FFFFFF4D;
 }
 
 .want-to-be-here {
@@ -1138,7 +1171,18 @@ left: 85px;
   border-radius: 5px;
   cursor: pointer;
   border: none;
+}
 
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 #00000040;
+}
+
+.range-toggle:focus {
+border: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
 }
 
 .toggle-min {
@@ -1201,6 +1245,11 @@ left: 85px;
   content: "";
 }
 
+.control-mark-radio:focus,
+.control-mark-checkbox:focus {
+  border: 3px solid #83B3D3;
+}
+
 .select-control {
   appearance: none;
   border-radius: 4px;
@@ -1211,6 +1260,22 @@ left: 85px;
   background-repeat: no-repeat;
   padding-left: 20px;
   font-weight: 400;
+}
+
+.select-control:hover {
+border: 2px solid #68A2CA;
+}
+
+.select-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  border: 2px solid #3F5E72;
+}
+
+.select-control:disabled {
+border: 2px solid #0000004D;
 }
 
 .modal-container {
@@ -1250,10 +1315,37 @@ left: 85px;
   background-color: #F2F2F2;
   border-radius: 50%;
   border: none;
-  background-image: url("../images/close.svg");
+  cursor: pointer;
+}
+
+.modal-close-button::after {
+  content: "";
+  background: url("../images/close.svg");
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-close-button:hover {
+background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  border: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active::after {
+  opacity: 30%;
 }
 
 .modal-title {
@@ -1307,19 +1399,150 @@ left: 85px;
   position: relative;
 }
 
-.plus {
+.calendar {
   position: absolute;
-  right: 13px;
-  top: 17px;
-  bottom: 17px;
-  fill: #7561574D;
+  right: 23px;
+  top: 14px;
+  opacity: 30%;
 }
 
-.minus {
+.date {
+  width: 440px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  position: relative;
+}
+
+.date-in::before {
+  content: "27 апреля 2020";
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+top: 12px;
+left: 20px;
+}
+
+.date-out::before {
+  content: "1 сентября 2023";
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+top: 12px;
+left: 20px;
+}
+
+.date-in::after {
+  content: "Мы не можем отправить вас в прошлое.";
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FF5757;
+top: 52px;
+left: 20px;
+}
+
+.date-out::after {
+  content: "На эти даты есть свободные номера. Пока есть.";
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  top: 52px;
+  left: 20px;
+}
+
+.button-count {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.counter-children::before {
+  content: "2";
+  top: 14px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.counter-adults::before {
+  content: "2";
+  top: 14px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.plus-svg {
+  position: absolute;
+  right: 13px;
+  top: 14px;
+  fill: #7561574D;
+  z-index: 3;
+  height: 20px;
+  width: 20px;
+  padding: 3px 3px 3px 3px;
+  cursor: pointer;
+}
+
+.minus-svg {
   position: absolute;
   left: 13px;
-  top: 23px;
-  bottom: 23px;
+  top: 14px;
+  bottom: 14px;
+  fill: #7561574D;
+  z-index: 3;
+  height: 20px;
+  width: 20px;
+  padding: 9px 3px 9px 3px;
+  cursor: pointer;
+}
+
+.minus-svg:hover,
+.plus-svg:hover {
+  fill: #000000;
+}
+
+.minus-svg:focus {
+  height: 26px;
+  width: 26px;
+  left: 10px;
+  top: 11px;
+  fill: #000000;
+  border: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.plus-svg:focus {
+  height: 26px;
+  width: 26px;
+  right: 10px;
+  top: 11px;
+  fill: #000000;
+  border: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.minus-svg:active,
+.plus-svg:active {
   fill: #7561574D;
 }
 

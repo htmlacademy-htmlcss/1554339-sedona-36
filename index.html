@@ -123,8 +123,7 @@
                 </div>
                 <div class="advantage">
                   <h3 class="advantages-title">Там есть мост дьявола</h3>
-                  <p class="advantages-description">Да, по нему можно пройти!
-                    сли вы осмелитесь, разумеется</p>
+                  <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
                 </div>
               </li>
             </ul>
@@ -265,24 +264,46 @@
             <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group">
                 <label class="modal-label" for="date-in">Дата Заезда:</label>
-                <input class="auth-form-field dates" type="date" id="date-in" name="date-in" value="27 апреля 2020">
+                <input class="auth-form-field dates visually-hidden" type="date" id="date-in" name="date-in"
+                  value="27 апреля 2020">
+                <span class="date date-in">
+                  <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none"
+                    viewBox="0 0 16 15">
+                    <path fill="#000" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                    <path fill="#000"
+                      d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" />
+                    <path fill="#000"
+                      d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+                  </svg>
+                </span>
               </p>
               <p class="field-group">
                 <label class="modal-label" for="date-out">Дата Выезда:</label>
-                <input class="auth-form-field dates" type="date" id="date-out" name="date-out" value="1 сентяября 2023">
+                <input class="auth-form-field dates visually-hidden" type="date" id="date-in" name="date-in"
+                  value="27 апреля 2020">
+                <span class="date date-out">
+                  <svg class="calendar" xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none"
+                    viewBox="0 0 16 15">
+                    <path fill="#000" d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                    <path fill="#000"
+                      d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" />
+                    <path fill="#000"
+                      d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.25 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.75 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.25 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+                  </svg>
+                </span>
               </p>
               <section class="guests">
                 <p class="field-group">
                   <label class="modal-label guest-label" for="adults">Взрослые:</label>
                   <input class="auth-form-field visually-hidden" type="number" id="adults" name="adults" value="2">
                   <span class="counter counter-adults">
-                    <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
+                    <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
                       viewBox="0 0 14 2">
-                      <path fill="#756157" fill-opacity="0.3" d="M0 0v2h14V0H0Z" />
+                      <path d="M0 0v2h14V0H0Z" />
                     </svg>
-                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
+                    <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
                       viewBox="0 0 14 14">
-                      <path fill="#756157" fill-opacity="0.3" d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
                     </svg>
                   </span>
                 </p>
@@ -302,16 +323,15 @@
                         <path fill="#333" d="M9.5 0 19 9H0l9.5-9Z" />
                       </svg></span>
                   </span>
-                  </span>
                   <input class="auth-form-field visually-hidden" type="number" id="children" name="children" value="2">
                   <span class="counter counter-children">
-                    <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
+                    <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"
                       viewBox="0 0 14 2">
-                      <path fill="#756157" fill-opacity="0.3" d="M0 0v2h14V0H0Z" />
+                      <path d="M0 0v2h14V0H0Z" />
                     </svg>
-                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
+                    <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
                       viewBox="0 0 14 14">
-                      <path fill="#756157" fill-opacity="0.3" d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                      <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
                     </svg>
                   </span>
                 </p>
@@ -321,7 +341,6 @@
           </section>
         </div>
       </div>
-    </div>
     </div>
   </body>
 
