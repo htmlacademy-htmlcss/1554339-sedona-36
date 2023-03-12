@@ -540,7 +540,7 @@ body {
   color: #000000;
   display: block;
   padding: 0;
-  margin: 17px 16px;
+  margin: 15px 14px;
 }
 
 .navigation-link-current::before {
@@ -750,8 +750,6 @@ body {
   opacity: 30%;
 }
 
-
-
 .button-filter {
   font-weight: 700;
   line-height: 20px;
@@ -815,6 +813,7 @@ body {
 }
 
 .button-reset:focus {
+  padding: 5px 0;
   border: solid 3px #83B3D3;
 }
 
