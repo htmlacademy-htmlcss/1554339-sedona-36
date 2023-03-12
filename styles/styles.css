@@ -36,6 +36,7 @@ body {
   color: #000000;
   background-color: #F2F2F2;
   text-align: left;
+
 }
 
 .visually-hidden {
@@ -59,31 +60,45 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
 }
 
 .invitation-discription {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
 }
 
 .search-discription {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  margin: 20px auto 62px auto;
+  margin: 20px auto 54px auto;
 }
 
 .about-sedona-go-to-advantages {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
 }
 
 .pagination {
   display: flex;
   margin: 80px 70px 60px 70px;
   padding: 0;
+  position: relative;
+}
+
+.pagination::before {
+  content: "";
+  left: 1px;
+  right: 1px;
+  top: -40px;
+  height: 1px;
+  background-color: #E6E6E6;
+  position: absolute;
 }
 
 .search-result {
@@ -167,6 +182,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
   margin-bottom: 25px;
 }
 
@@ -176,6 +192,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .search-title {
@@ -254,6 +272,7 @@ body {
 .navigation-item {
   font-size: 20px;
   font-weight: 700;
+  line-height: 20px;
   list-style-type: none;
   margin: 0;
   position: relative;
@@ -317,23 +336,23 @@ body {
   display: flex;
   right: 85px;
   left: 85px;
-  }
+}
 
 .advantages-item:nth-child(1) .advantages-title::after,
-.advantages-item:nth-last-child(1) .advantages-title::after  {
-position: absolute;
-content: "";
-width: 60px;
-height: 2px;
-background-color: #FFFFFF4D;
-top: 86px;
-display: flex;
-right: 85px;
-left: 85px;
+.advantages-item:nth-last-child(1) .advantages-title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #FFFFFF4D;
+  top: 86px;
+  display: flex;
+  right: 85px;
+  left: 85px;
 }
 
 .invitation-text {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .advice-title {
@@ -342,6 +361,9 @@ left: 85px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .breadcrumbs-main {
@@ -366,6 +388,7 @@ left: 85px;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin: 0;
 }
 
 .advantages-list {
@@ -384,8 +407,17 @@ left: 85px;
 }
 
 .advantage {
-  margin: 102px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
   width: 240px;
+  min-height: 385px;
+}
+
+.advice-svg {
+  margin: 0 auto;
 }
 
 .advantages-item {
@@ -401,11 +433,18 @@ left: 85px;
   text-align: center;
   list-style-type: none;
   margin: 0;
-  min-height: 385px;
+  height: 385px;
+  padding: 81px 85px;
+
+
 }
 
 .advice-content {
-  margin: 81px 85px;
+  min-height: 223px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .advantages-item-wide {
@@ -464,11 +503,10 @@ left: 85px;
 }
 
 .page-container {
-  width: 1200px;
+  max-width: 1200px;
   background-color: #ffffff;
   margin: 0 auto;
   box-shadow: 0 0 15px 0 #00000033;
-
 }
 
 .footer-social-list {
@@ -508,11 +546,12 @@ left: 85px;
 .navigation-link-current::before {
   position: absolute;
   right: 16px;
-  bottom: 0;
+  bottom: -1px;
   left: 16px;
   height: 2px;
   background-color: #756257;
   content: "";
+  z-index: 1;
 }
 
 .display {
@@ -520,6 +559,12 @@ left: 85px;
   border-radius: 4px;
   border-color: #E5E5E5;
   margin-right: 8px;
+  width: 48px;
+  height: 48px;
+}
+
+.display:nth-last-child(1) {
+  margin-right: 0;
 }
 
 .display:hover {
@@ -538,10 +583,6 @@ left: 85px;
   background-color: #E5E5E5;
 }
 
-.display:last-of-type {
-  margin-right: 0;
-}
-
 .display-current {
   border-color: #000000;
 }
@@ -550,6 +591,7 @@ left: 85px;
   display: block;
   text-decoration: none;
   color: #000000;
+  margin: auto 0;
 }
 
 .control-label {
@@ -561,6 +603,8 @@ left: 85px;
   height: 52px;
   width: 452px;
   border: none;
+  padding-left: 20px;
+  border-radius: 4px 0 0 4px;
 }
 
 .field-catalog {
@@ -575,9 +619,11 @@ left: 85px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
   border: none;
   width: 232px;
   cursor: pointer;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscription-button:hover {
@@ -603,12 +649,9 @@ left: 85px;
   text-align: center;
   text-decoration: none;
   margin: 5px 0;
-  margin-left: auto;
-  margin-right: auto;
   color: #000000;
   display: flex;
   justify-content: center;
-  width: 720px;
 }
 
 .footer-contacts-address-phone:hover {
@@ -789,7 +832,7 @@ left: 85px;
   list-style-type: none;
   margin: 0 70px;
   padding: 0;
-  gap: 20px;
+  gap: 16px 20px;
 }
 
 .price {
@@ -816,18 +859,25 @@ left: 85px;
   padding-left: 20px;
   border: none;
   background-color: #E6E6E6;
-  cursor: pointer;;
+  cursor: pointer;
+  outline: none;
 }
 
 .price-input:hover {
   border: none;
-  }
+  outline: none;
+}
+
 .price-input:focus {
-border: 3px solid #83B3D3;
+  border: 3px solid #83B3D3;
+  padding-left: 17px;
+  outline: none;
 }
 
 .price-input:active {
   border: 2px solid #000000;
+  outline: none;
+  padding-left: 18px;
 }
 
 .price-block {
@@ -856,13 +906,20 @@ border: 3px solid #83B3D3;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  padding: 7px 0;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  text-align: center;
 }
 
 .select-control {
   font-size: 18px;
   line-height: 21px;
   width: 292px;
+  outline: none;
 }
 
 .product-card {
@@ -882,7 +939,6 @@ border: 3px solid #83B3D3;
   column-gap: 20px;
   row-gap: 16px;
   margin-top: 16px;
-  margin-bottom: 20px;
 }
 
 .product-card-title {
@@ -1157,6 +1213,7 @@ border: 3px solid #83B3D3;
   margin-top: 48px;
   width: 287px;
 }
+
 .range-bar {
   position: absolute;
   height: 4px;
@@ -1178,7 +1235,7 @@ border: 3px solid #83B3D3;
 }
 
 .range-toggle:focus {
-border: 3px solid #83B3D3;
+  border: 3px solid #83B3D3;
 }
 
 .range-toggle:active {
@@ -1216,8 +1273,11 @@ border: 3px solid #83B3D3;
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 5px;
-  left: 5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   border-radius: 50%;
   background-color: #3F5E72;
   content: "";
@@ -1237,18 +1297,26 @@ border: 3px solid #83B3D3;
 .control-input[type="checkbox"]:checked + .control-mark-checkbox::before {
   position: absolute;
   background-image: url("../images/catalog-page/mark.svg");
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 10px;
   background-repeat: no-repeat;
-  top: 6px;
-  left: 4px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   content: "";
 }
 
-.control-mark-radio:focus,
-.control-mark-checkbox:focus {
+
+
+
+
+.control-input:focus + span {
   border: 3px solid #83B3D3;
+
 }
+
 
 .select-control {
   appearance: none;
@@ -1263,7 +1331,7 @@ border: 3px solid #83B3D3;
 }
 
 .select-control:hover {
-border: 2px solid #68A2CA;
+  border: 2px solid #68A2CA;
 }
 
 .select-control:focus {
@@ -1275,7 +1343,7 @@ border: 2px solid #68A2CA;
 }
 
 .select-control:disabled {
-border: 2px solid #0000004D;
+  border: 2px solid #0000004D;
 }
 
 .modal-container {
@@ -1287,13 +1355,15 @@ border: 2px solid #0000004D;
   height: 100%;
   background-color: #F2F2F2CC;
   z-index: 1;
+  padding-top: 396px;
 }
 
 .modal {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px;
   background-color: #ffffff;
+  height: 576px;
 }
 
 .modal-auth {
@@ -1332,7 +1402,7 @@ border: 2px solid #0000004D;
 }
 
 .modal-close-button:hover {
-background-color: #E6E6E6;
+  background-color: #E6E6E6;
 }
 
 .modal-close-button:focus {
@@ -1420,8 +1490,8 @@ background-color: #E6E6E6;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-top: 12px;
-left: 20px;
+  top: 12px;
+  left: 20px;
 }
 
 .date-out::before {
@@ -1431,8 +1501,8 @@ left: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-top: 12px;
-left: 20px;
+  top: 12px;
+  left: 20px;
 }
 
 .date-in::after {
@@ -1442,8 +1512,8 @@ left: 20px;
   font-weight: 400;
   line-height: 21px;
   color: #FF5757;
-top: 52px;
-left: 20px;
+  top: 52px;
+  left: 20px;
 }
 
 .date-out::after {
